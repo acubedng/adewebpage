@@ -31,12 +31,77 @@
         text-align: justify;
         text-justify: inter-word;
         padding: 5px;
+        background: #E3F2FD;
+	    border-radius: 4px;
         box-sizing: border-box;
     }
 
     hr {
         width: 60%;
         text-align: left;margin-left: 0;
+    }
+
+    .container {
+        width: 40%;
+	    padding: 5px;
+	    background: #E3F2FD;
+	    border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    *:focus {
+        outline: 0;
+        }
+        
+        label {
+        font-size: 0.85em;
+        margin-left: 12px;
+        }
+    input[type=text],input[type=email], textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    /* Add styles to show 'focus' of selector */
+    input[type=text]:focus,input[type=email]:focus, textarea:focus {
+        border: 1px solid green;
+    }
+
+    /* Add styles to the submit button */
+    input[type=submit] {
+        background: #64B5F6;
+        margin: 0 auto;
+        outline: 0;
+        color: white;
+        border: 0;
+        padding: 12px 24px;
+        border-radius: 4px;
+        transition: all ease-in-out 0.1s;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* Add styles for 'focus' property */
+    input[type=submit]:focus {
+        background: #A5D6A7;
+        color: whitesmoke;
+    }
+
+    /* Style 'hover' property */
+    input[type=submit]:hover {
+        background: #2196F3;
+    }
+
+    /* Align items to center of the 'div' with the class 'center' */
+    .center {
+        text-align: center;
     }
   
 </style>
@@ -177,6 +242,28 @@
     <div class="box">
         <h3 id="leadership">LEADERSHIP</h3>
         <p>Team leader- Guest Reception and Follow-up in local christian assembly</p>
+    </div>
+
+    <hr>
+    
+    <div class="container">
+        <h3>Contact Form</h3>
+        <form action="https://formspree.io/acubedng@yahoo.com" name="contact_form" method="POST">
+            <label for="name">Name</label>
+            <input name="first_name" type="text" minlength="4" required placeholder="John"/>
+            <br>
+            <label for="email">Email</label>
+            <input name="_replyto" type="email" required placeholder="you@domain.com"/>
+            <br>
+            <label for="title">Title</label>
+            <input name="title" type="text"  required placeholder="Title"/>
+            <br>
+            <label for="message">Message</label><br>
+            <textarea name="message" cols="30" rows="10" minlength="20" placeholder="Enter your message here ..." required> </textarea>
+            <div class="center">
+                <input type="submit" value="Submit">
+            </div>
+        </form>	
     </div>
 </body>
 </html>
